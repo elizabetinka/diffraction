@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.split {
+    height: 80%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 64;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  
+  .left {
+    left: 0;
+    /*background-color: #9c9af5;*/
+  }
+  
+  /* Control the right side */
+  
+  .right {
+    left: 40%;
+    width: 70%;
+    /*background-color: red;*/
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .centered2 {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .footer {
+    position: absolute;
+    left: 45%;
+    text-align: center;
+    top: 90%;
+  }
+
+  .centeredGraf {
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .btn {
+    border: 10px;
+    bottom: 10%;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+     background-color:  rgb(55 48 163 / 100%); 
+    border-color: white;
+    /*
+    background-image: linear-gradient(
+      to top left,
+      rgb(0 0 0 / 20%),
+      rgb(0 0 0 / 20%) 30%,
+      rgb(0 0 0 / 0%)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgb(255 255 255 / 60%),
+      inset -2px -2px 3px rgb(0 0 0 / 60%);
+      */
+  }
+  
+  .btn:hover {
+     background-color: rgb(99 102 241 / 100%); 
+  }
+  
+  .btn:active {
+    box-shadow:
+      inset -2px -2px 3px rgb(255 255 255 / 60%),
+      inset 2px 2px 3px rgb(0 0 0 / 60%);
+  }
+
+ .text {
+    border:2px solid rgb(55 48 163 / 100%);
+    background-color:  rgba(190, 187, 234, 0.648);
+  }

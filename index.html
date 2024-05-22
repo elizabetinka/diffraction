@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моделирование. Связанные маятники</title>
+  
+  <link rel="stylesheet" href="output.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-blue-200">
+  <header class="text-center">
+    <h1 class=" my-10 font-serif text-2xl "> Моделирование.Связанные маятники</h1>
+  </header>
+
+  <div class="split left">
+    <div class="centered">
+
+      <div>
+        <label>Длина подвеса L(м)</label> 
+        <input class="input  text-center text" type="text" id="L_id" value="1">
+    </div>
+    <div>
+      <label>Расстояние до точки крепления L_1(м)</label> 
+      <input class="input  text-center text" type="text" id="L_1_id" value="0.8">
+  </div>
+  <div>
+    <label>Масса груза m(кг)</label> 
+    <label>\n</label>
+    <input class="input  text-center text" type="text" id="m_id" value="1.5">
+</div>
+<div>
+  <label>Жесткость пружины k (H/м)</label> 
+  <input class="input  text-center text" type="text" id="k_id" value="0.5">
+</div>
+<div>
+  <label>Коэффициент затухания β (1/с)</label> 
+  <input class="input  text-center text" type="text" id="beta_id" value="0.01">
+</div>
+<div>
+  <label>Отклонение первого 𝜙1 (π/12)</label> 
+  <input class="input  text-center text" type="text" id="fi1_id" value="3">
+</div>
+<div>
+  <label>Отклонение второго 𝜙2 (π/12)</label> 
+  <input class="input  text-center text" type="text" id="fi2_id" value="2">
+</div>
+
+<div>
+  <label  for="i" id="valueFrec1">Нормальная частота Ω1:  </label>
+</div>
+<div>
+  <label  for="i" id="valueFrec2">Нормальная частота Ω2: </label>
+</div>
+
+     
+      <div class="my-10 text-center">
+        <input  id="del" class="hidden btn text-center" type="button" value="Костыль" />
+      </div>
+      <div class="text-center">
+        <input  id="result" class="btn" type="button" value="Результат" />
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="split right">
+    <div style="width: 80%;">
+    <div id="tester" ></div>
+     <div id="tester2" ></div>
+    </div>
+  </div>
+  <footer class="footer text-lg">
+    <a href="https://t.me/Indo_evri_momint" target="_blank"> Ссылка на telegram</a>
+</footer>
+    
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
