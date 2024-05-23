@@ -1,3 +1,8 @@
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext('2d');
+
+
+
 let wave_len = 600*Math.pow(10,-9);
 let t = 500*Math.pow(10,-6);
 let size=200*Math.pow(10,-6);
@@ -11,6 +16,12 @@ const availableScreenWidth = window.screen.availWidth;
 const availableScreenHeight = window.innerHeight;
 console.log("Ширина", availableScreenWidth );
 console.log("Длина", availableScreenHeight );
+
+ctx.canvas.width=availableScreenWidth/100*80;
+ctx.canvas.height=availableScreenHeight/100*40;
+
+let width = (canvas.width);
+let height = (canvas.height);
 
 
 let n_text = document.getElementById("n_id");
@@ -76,6 +87,15 @@ function showMessage(wave_len,n,size,t) {
             size: 9,
           }
     };
+
+    for (let i = 0; i < massy.length; ++i){
+        let currentIntensity = massy[i];
+        let currentColor = 255 * currentIntensity / (n ** 2);
+        let color=`rgba(${currentColor},${currentColor},${currentColor}, 1)`;
+
+        ctx.fillStyle = color;
+        ctx.fillRect(i, 0, 1, height);
+    }
     
     
     Plotly.react( 'tester', [result], baseLayout );
